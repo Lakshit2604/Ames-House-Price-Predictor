@@ -112,8 +112,8 @@ End-to-End House Price Predictor/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/house-price-predictor.git
-cd house-price-predictor
+git clone https://github.com/Lakshit2604/Ames-House-Price-Predictor.git
+cd Ames-House-Price-Predictor
 ```
 
 ### 2. Install Dependencies
