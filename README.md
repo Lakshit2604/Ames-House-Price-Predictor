@@ -1,11 +1,13 @@
-# 🏠 End-to-End House Price Predictor
+# 🏠 Ames House Price Predictor
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ames-house-prices-predictor.streamlit.app/)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.8%2B-orange.svg)](https://scikit-learn.org/)
 [![XGBoost](https://img.shields.io/badge/XGBoost-3.2%2B-red.svg)](https://xgboost.readthedocs.io/)
 [![LightGBM](https://img.shields.io/badge/LightGBM-4.6%2B-brightgreen.svg)](https://lightgbm.readthedocs.io/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.55%2B-FF4B4B.svg)](https://streamlit.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+🔗 **Live Interactive App**: [https://ames-house-prices-predictor.streamlit.app/](https://ames-house-prices-predictor.streamlit.app/)
 
 > A production-ready real estate valuation system powered by a **Multi-Paradigm Ensemble** (Lasso + Ridge + XGBoost + LightGBM) trained on the **Ames Housing Dataset**. Features a modern, interactive Streamlit web dashboard for real-time market value estimation.
 
