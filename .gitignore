@@ -25,6 +25,7 @@ models/*.joblib
 models/*.json
 models/*.xgb
 !models/best_model.pkl
+!models/feature_metadata.json
 
 # ── Environment ──────────────────────────
 .env

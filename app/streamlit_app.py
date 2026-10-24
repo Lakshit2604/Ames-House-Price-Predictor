@@ -27,6 +27,7 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
+import json
 import src.evaluate as ev
 import src.models as mod
 
@@ -41,9 +42,18 @@ def load_production_pipeline():
         st.error(f"Model file not found at {model_path}. Please ensure Phase 5 is completed.")
         st.stop()
     model = ev.load_model(model_path)
-    train_features = pd.read_csv(DATA_DIR / "train_features.csv")
-    feature_columns = [c for c in train_features.columns if c not in ["Id", "SalePrice"]]
-    baseline_template = train_features[feature_columns].median().to_dict()
+    
+    metadata_path = MODELS_DIR / "feature_metadata.json"
+    if metadata_path.exists():
+        with open(metadata_path, "r") as f:
+            meta = json.load(f)
+        feature_columns = meta["feature_columns"]
+        baseline_template = meta["baseline_template"]
+    else:
+        train_features = pd.read_csv(DATA_DIR / "train_features.csv")
+        feature_columns = [c for c in train_features.columns if c not in ["Id", "SalePrice"]]
+        baseline_template = train_features[feature_columns].median().to_dict()
+
     return model, feature_columns, baseline_template
 
 model, feature_columns, baseline_template = load_production_pipeline()
