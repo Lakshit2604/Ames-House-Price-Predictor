@@ -22,6 +22,7 @@ models/*.pkl
 models/*.joblib
 models/*.json
 models/*.xgb
+!models/best_model.pkl
 
 # ── Environment ──────────────────────────
 .env
