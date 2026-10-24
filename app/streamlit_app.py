@@ -357,7 +357,7 @@ with tab_benchmarks:
         "Validation R²": ["92.8%", "92.7%", "92.6%", "92.1%", "91.9%", "91.8%", "91.4%", "90.6%", "89.9%", "88.3%", "77.9%"],
         "Mean Absolute Error ($)": ["$12,715", "$13,713", "$12,845", "$13,824", "$13,709", "$13,969", "$14,288", "$14,178", "$14,677", "$15,760", "$23,376"],
     }
-    st.dataframe(pd.DataFrame(leaderboard_data), use_container_width=True, hide_index=True)
+    st.dataframe(pd.DataFrame(leaderboard_data), width="stretch", hide_index=True)
 
 with tab_about:
     st.subheader("📖 Machine Learning Architecture")
