@@ -16,6 +16,8 @@ build/
 data/raw/*.csv
 data/raw/*.zip
 data/processed/
+data/*.csv
+*.csv
 
 # ── Models — can be large binaries ──────
 models/*.pkl
